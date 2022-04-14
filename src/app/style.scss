@@ -4,4 +4,7 @@
 @use './styles/blocks/blocks';
 @use './styles/layout/footer';
 
-// body {}
+body {
+	background: var(--wp--preset--color--brand-cream);
+	color: var(--wp--preset--color--brand-blue);
+}

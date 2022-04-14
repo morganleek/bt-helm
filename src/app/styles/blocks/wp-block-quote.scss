@@ -1,8 +1,15 @@
-.wp-block-quote {
-	p {
+@use "../core/mixins";
 
+.wp-block-quote {
+	@include mixins.trim;
+	p {
+		font-size: 4rem;
+		color: var(--wp--preset--color--brand-purple);
+		&:not(.has-text-color) {
+			color: var(--wp--preset--color--brand-purple);
+		}
 	}
 	cite {
-		
+		color: var(--wp--preset--color--brand-purple);
 	}
 }

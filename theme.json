@@ -120,19 +120,29 @@
 					"name": "Background"
 				},
 				{
-					"slug": "primary",
-					"color": "#1a4548",
-					"name": "Primary"
+					"slug": "brand-purple",
+					"color": "#9442f7",
+					"name": "Purple"
 				},
 				{
-					"slug": "secondary",
-					"color": "#ffe2c7",
-					"name": "Secondary"
+					"slug": "brand-cream",
+					"color": "#fff5c7",
+					"name": "Cream"
 				},
 				{
-					"slug": "tertiary",
-					"color": "#F6F6F6",
-					"name": "Tertiary"
+					"slug": "brand-blue",
+					"color": "#243161",
+					"name": "Blue"
+				},
+				{
+					"slug": "brand-yellow",
+					"color": "#f8e049",
+					"name": "Yellow"
+				},
+				{
+					"slug": "brand-orange",
+					"color": "#f25945",
+					"name": "Orange"
 				}
 			]
 		},

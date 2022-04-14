@@ -7,6 +7,11 @@
 			margin-top: 0;
 		}
 	}
+	&.is-style-background-contained {
+		img.wp-block-cover__image-background {
+			object-fit: contain;
+		}
+	}
 	.wp-block-cover__inner-container {
 		@include mixins.trim;
 		max-width: var(--wp--custom--sizing--narrow);

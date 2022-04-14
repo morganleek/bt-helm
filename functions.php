@@ -112,10 +112,16 @@
 			] );
 	
 			// Cover
-			// register_block_style( 'core/cover', [
-			//   'name' => 'banner-reversed',
-			//   'label' => __( 'Reversed', 'bones_name' ),
-			// ] );
+			register_block_style( 'core/cover', [
+				'name' => 'background-contained',
+				'label' => __( 'Background Contained', 'bones_name' ),
+			] );
+
+			// Image
+			register_block_style( 'core/image', [
+				'name' => 'oversized',
+				'label' => __( 'Oversized', 'bones_name' ),
+			] );
 	
 			// Columns
 			// register_block_style( 'core/columns', [

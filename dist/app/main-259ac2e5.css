@@ -1,0 +1,20 @@
+/*!
+ * 
+ * bonesTheme
+ * 
+ * @author 
+ * @version 0.1.0
+ * @link UNLICENSED
+ * @license UNLICENSED
+ * 
+ * Copyright (c) 2022 
+ * 
+ * This software is released under the UNLICENSED License
+ * https://opensource.org/licenses/UNLICENSED
+ * 
+ * Compiled with the help of https://wpack.io
+ * A zero setup Webpack Bundler Script for WordPress
+ */
+h1,h2{margin-top:.25em;margin-bottom:.25em}h3{margin-top:.5em;margin-bottom:.5em}h4{margin-top:.5em;margin-bottom:.5em}h5{margin-top:.5em;margin-bottom:.5em}header.wp-block-template-part{position:fixed;top:0;left:0;right:0;z-index:100}.wp-block-cover{padding:1.25em var(--wp--custom--padding--horizontal)}.wp-block-cover.alignfull+.wp-block-group.alignfull{margin-top:0}.wp-block-cover.is-style-background-contained img.wp-block-cover__image-background{-o-object-fit:contain;object-fit:contain}.wp-block-cover .wp-block-cover__inner-container{max-width:var(--wp--custom--sizing--narrow);margin-left:auto;margin-right:auto}.wp-block-cover .wp-block-cover__inner-container>*:first-child{margin-top:0}.wp-block-cover .wp-block-cover__inner-container>*:last-child{margin-bottom:0}.wp-block-cover .wp-block-cover__inner-container .wp-block-columns .wp-block-column>*:first-child{margin-top:0}.wp-block-cover .wp-block-cover__inner-container .wp-block-columns .wp-block-column>*:last-child{margin-bottom:0}.wp-block-group.alignfull+.wp-block-group.alignfull{margin-top:0}.wp-block-group:where(.has-background){padding:1.25em var(--wp--custom--padding--horizontal)}main.wp-block-group{margin-top:0}@media(min-width: 600px){.wp-block-media-text.is-stacked-on-mobile{grid-template-columns:1fr;grid-template-rows:auto auto}.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__media{grid-column:1;grid-row:1}.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content{grid-column:1;grid-row:2}}.wp-block-image.is-style-oversized img{transform:scale(1.35);z-index:0;position:relative}.wp-block-quote>*:first-child{margin-top:0}.wp-block-quote>*:last-child{margin-bottom:0}.wp-block-quote p{font-size:4rem;color:var(--wp--preset--color--brand-purple)}.wp-block-quote p:not(.has-text-color){color:var(--wp--preset--color--brand-purple)}.wp-block-quote cite{color:var(--wp--preset--color--brand-purple)}body{background:var(--wp--preset--color--brand-cream);color:var(--wp--preset--color--brand-blue)}
+
+/*# sourceMappingURL=main-259ac2e5.css.map*/

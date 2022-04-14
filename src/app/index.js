@@ -1,5 +1,5 @@
 import './style.scss';
 
 document.addEventListener( 'DOMContentLoaded', () => {
-	console.log( 'Hello WPack.io' );
+	console.log( 'Hello WPack.io yay' );
 } );
