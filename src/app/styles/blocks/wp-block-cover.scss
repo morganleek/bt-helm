@@ -1,6 +1,7 @@
 @use "../core/mixins";
 
 .wp-block-cover {
+	max-height: 783px;
 	padding: 1.25em var(--wp--custom--padding--horizontal);	
 	&.alignfull {
 		& + .wp-block-group.alignfull {
@@ -11,6 +12,9 @@
 		img.wp-block-cover__image-background {
 			object-fit: contain;
 		}
+	}
+	p {
+		font-family: var(--wp--preset--font-family--national-extra-bold);
 	}
 	.wp-block-cover__inner-container {
 		@include mixins.trim;

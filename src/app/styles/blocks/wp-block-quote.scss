@@ -2,14 +2,29 @@
 
 .wp-block-quote {
 	@include mixins.trim;
+	max-width: 320px;
 	p {
-		font-size: 4rem;
+		font-size: clamp(3.8671875rem, 3.0369rem + 3.6904vw, 6.1875rem);
 		color: var(--wp--preset--color--brand-purple);
+		letter-spacing: 0.04em;
+		margin-bottom: 0;
+		line-height: 0.8em;
+		&:first-of-type {
+			&::before {
+				content: "“";
+			}
+		}
+		&:last-of-type {
+			&::after {
+				content: "”";
+			}
+		}
 		&:not(.has-text-color) {
 			color: var(--wp--preset--color--brand-purple);
 		}
 	}
 	cite {
 		color: var(--wp--preset--color--brand-purple);
+		font-size: clamp(1.1rem, 0.8978rem + 0.8986vw, 1.665rem);
 	}
 }

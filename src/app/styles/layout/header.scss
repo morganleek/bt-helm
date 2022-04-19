@@ -1,0 +1,24 @@
+#helm-logo-group {
+	max-width: 305px;
+	.logo-fill {
+		fill: var(--wp--preset--color--brand-blue);
+		// body.page-alcohol & {
+		// 	fill: var(--wp--preset--color--brand-cream);
+		// }
+	}
+}
+
+header.wp-block-template-part {
+	& > .wp-block-group {
+		& > .wp-block-group { 
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			& > .wp-block-group { // Logo
+
+			}
+			& > nav { // Nav
+
+			}
+		}
+	}
+}

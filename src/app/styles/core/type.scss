@@ -2,6 +2,9 @@ h1,
 h2 {
 	margin-top: 0.25em;
 	margin-bottom: 0.25em;
+	&.wp-block-post-title {
+		font-size: 1rem;
+	}
 }
 h3 {
 	margin-top: 0.5em;
@@ -14,4 +17,32 @@ h4 {
 h5 {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+	&.is-style-narrow {
+		max-width: min(670px, 54.3vw);
+	}
+}
+
+p {
+	letter-spacing: -0.02em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.has-large-font-size {
+	line-height: var(--wp--custom--typography--line-height--tiny);
+}
+.has-extra-large-font-size {
+	font-family: var(--wp--preset--font-family--geometric-slab-medium);
+	line-height: 0.98em;
+}
+
+* {
+	&:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+		strong {
+			font-family: var(--wp--preset--font-family--geometric-slab-bold);
+			font-weight: normal;
+		}
+	}
 }

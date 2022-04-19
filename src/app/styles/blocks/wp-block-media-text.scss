@@ -1,3 +1,5 @@
+@use "../core/mixins";
+
 .wp-block-media-text {
 	@media (min-width: 600px) {
 		&.is-stacked-on-mobile {
@@ -8,9 +10,17 @@
 				grid-row: 1;
 			}
 			.wp-block-media-text__content {
+				@include mixins.trim;
 				grid-column: 1;
 				grid-row: 2;
+				padding-top: 2em;
+				padding-bottom: 1.5em;
+
 			}
+		}
+		&.has-background {
+			border-radius: 30px;
+			overflow: hidden;
 		}
 	}
 }
