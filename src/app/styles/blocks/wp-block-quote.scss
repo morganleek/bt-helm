@@ -2,21 +2,34 @@
 
 .wp-block-quote {
 	@include mixins.trim;
-	max-width: 320px;
+	// max-width: 320px;
+	& > * {
+		max-width: 320px;
+		width: 100%;
+		display: block;
+		margin-left: min(12.7vw, 173px);
+	}
 	p {
+		font-family: var(--wp--preset--font-family--national-extra-bold);
 		font-size: clamp(3.8671875rem, 3.0369rem + 3.6904vw, 6.1875rem);
 		color: var(--wp--preset--color--brand-purple);
-		letter-spacing: 0.04em;
+		letter-spacing: 0.0175em;
 		margin-bottom: 0;
 		line-height: 0.8em;
 		&:first-of-type {
 			&::before {
 				content: "“";
+				display: block;
+				font-size: 1.5em;
+				transform: translate(0, 35%);
 			}
 		}
 		&:last-of-type {
 			&::after {
 				content: "”";
+				display: block;
+				font-size: 1.5em;
+				transform: translate(0, 48%);
 			}
 		}
 		&:not(.has-text-color) {
@@ -24,7 +37,9 @@
 		}
 	}
 	cite {
+		font-family: var(--wp--preset--font-family--geometric-slab-medium);
 		color: var(--wp--preset--color--brand-purple);
 		font-size: clamp(1.1rem, 0.8978rem + 0.8986vw, 1.665rem);
+		margin-top: 0.5em;
 	}
 }

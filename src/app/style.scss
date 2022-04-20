@@ -1,8 +1,15 @@
+@use '../../node_modules/tom-select/src/scss/tom-select';
+
 @use './styles/core/global';
 @use './styles/core/type';
 @use './styles/layout/header';
 @use './styles/blocks/blocks';
 @use './styles/layout/footer';
+
+* {
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 body {
 	background: var(--wp--preset--color--brand-cream);

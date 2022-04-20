@@ -11,4 +11,9 @@
 
 main.wp-block-group {
 	margin-top: 0;
+	.wp-block-group {
+		*:not(.wp-block-spacer) {
+			--wp--style--block-gap: 45px;
+		}
+	}
 }

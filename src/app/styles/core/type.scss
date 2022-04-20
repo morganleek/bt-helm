@@ -1,3 +1,9 @@
+h1 {
+	letter-spacing: 0.01em;
+}
+h2 {
+	letter-spacing: 0.01em;
+}
 h1,
 h2 {
 	margin-top: 0.25em;
@@ -9,6 +15,7 @@ h2 {
 h3 {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
+	letter-spacing: 0.0125em;
 }
 h4 {
 	margin-top: 0.5em;
@@ -26,17 +33,25 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
 	letter-spacing: -0.02em;
-	margin-top: 1.5em;
-	margin-bottom: 1.5em;
+	margin-top: 1.4em;
+	margin-bottom: 1.4em;
+	.has-large-font-size,
+	&.has-large-font-size {
+		// line-height: var(--wp--custom--typography--line-height--tiny);
+		line-height: 1.05em;
+		margin-top: 0.7em;
+		margin-bottom: 0.7em;
+	}
+	.has-extra-large-font-size,
+	&.has-extra-large-font-size {
+		font-family: var(--wp--preset--font-family--geometric-slab-medium);
+    line-height: 0.95em;
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+    letter-spacing: 0;
+	}
 }
 
-.has-large-font-size {
-	line-height: var(--wp--custom--typography--line-height--tiny);
-}
-.has-extra-large-font-size {
-	font-family: var(--wp--preset--font-family--geometric-slab-medium);
-	line-height: 0.98em;
-}
 
 * {
 	&:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {

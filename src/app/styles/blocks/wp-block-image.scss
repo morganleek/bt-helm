@@ -6,8 +6,15 @@
 
 	}
 	&.is-style-oversized {
+		&::after {
+			content: "";
+			display: block;
+			width: 10px;
+			height: 0;
+			padding-bottom: 31.5%;
+		}
 		img {
-			transform: scale(1.35);
+			transform: translate(-13%, 15%) scale(1.75);
 			z-index: -1;
 			position: relative;
 		}

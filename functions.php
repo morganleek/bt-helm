@@ -34,6 +34,7 @@
 			);
 			// Enqueue a few of our entry points
 			add_action( 'init', [$this, 'bones_theme_font_styles' ], 10 );
+			add_action( 'init', [$this, 'bones_theme_register_menus'], 20 );
 			add_action( 'wp_enqueue_scripts', [ $this, 'plugin_enqueue' ] );
 			add_action( 'after_setup_theme', [ $this, 'bones_theme_support' ] );
 			add_action( 'admin_init', [$this, 'bones_theme_font_styles' ] );
@@ -187,6 +188,15 @@
 			}
 
 			return $classes;
+		}
+
+		public function bones_theme_register_menus() {
+			register_nav_menus(
+				array( 
+					'top' => __('Top Menu', '_themename'),
+					'bottom' => __('Bottom Menu', '_themename')
+				)
+			);
 		}
 	}
 

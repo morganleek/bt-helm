@@ -8,14 +8,18 @@
 			.wp-block-media-text__media {
 				grid-column: 1;
 				grid-row: 1;
+				min-height: max(250px, 22.4vw);
 			}
 			.wp-block-media-text__content {
 				@include mixins.trim;
 				grid-column: 1;
 				grid-row: 2;
-				padding-top: 2em;
-				padding-bottom: 1.5em;
-
+				padding: 3.65em 1.3em 1.1em;
+				p {
+					&.has-large-font-size {
+						letter-spacing: -0.015em;
+					}
+				}
 			}
 		}
 		&.has-background {

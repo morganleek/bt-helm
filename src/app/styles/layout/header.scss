@@ -1,24 +1,73 @@
-#helm-logo-group {
-	max-width: 305px;
-	.logo-fill {
-		fill: var(--wp--preset--color--brand-blue);
-		// body.page-alcohol & {
-		// 	fill: var(--wp--preset--color--brand-cream);
-		// }
+@forward '../../.././../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+
+body {
+	--header--featured-color: var(--wp--preset--color--brand-blue);
+	&.logo-fill-background-brand-purple,
+	&.logo-fill-background-brand-orange,
+	&.logo-fill-background-brand-blue {
+		--header--featured-color: var(--wp--preset--color--brand-cream);
+	}
+}
+
+.logo-wrapper {
+	width: 318px;
+	#helm-logo-group {
+		max-width: 305px;
+		width: 100%;
+		.logo-fill {
+
+			fill: var(--header--featured-color);
+			transition: all 0.3s;
+			// body.page-alcohol & {
+			// 	fill: var(--wp--preset--color--brand-cream);
+			// }
+			
+		}
 	}
 }
 
 header.wp-block-template-part {
-	& > .wp-block-group {
-		& > .wp-block-group { 
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			& > .wp-block-group { // Logo
+	--wp--custom--spacing--outer: max(2.375rem, 2.78vw);
+	.header-inner {
+		padding-left: var(--wp--custom--spacing--outer);
+		padding-right: var(--wp--custom--spacing--outer);
+		padding-top: 35px; // var(--wp--custom--spacing--outer);
+		width: 100%;
+		max-width: var(--wp--custom--sizing--wide);
+		margin-left: auto;
+		margin-right: auto;
+		align-items: flex-start;
+	}
 
+	.menu-toggle { // Hamburger
+		justify-self: end;
+		text-transform: uppercase;
+		font-family: var(--wp--preset--font-family--geometric-slab-bold);
+		display: flex;
+		align-items: center;
+		a {
+			color: var(--header--featured-color);
+			transition: color 0.3s;
+			// text-decoration: none;
+			padding-top: 2px;
+		}
+		.hamburger {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: min(3.66vw, 50px);
+			padding-right: 0;
+			.hamburger-box {
+				display: block;
 			}
-			& > nav { // Nav
-
+			.hamburger-inner, 
+			.hamburger-inner::before, 
+			.hamburger-inner::after {
+				background-color: var(--header--featured-color);
+				border-radius: 0;
+				height: 3px;
 			}
 		}
 	}
 }
+

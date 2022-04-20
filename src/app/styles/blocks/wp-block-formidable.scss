@@ -1,0 +1,100 @@
+form {
+	fieldset {
+		padding: 0;
+		border: 0 none;
+	}
+	select {
+		width: 100%;
+	}
+	input:not([type="submit"]):not([type="select-one"]), 
+	textarea {
+		width: 100%;
+		font-family: var(--wp--preset--font-family--geometric-slab-medium);
+		color: var(--wp--preset--color--brand-blue);
+		border: 2px solid var(--wp--preset--color--brand-blue);
+		line-height: 1.2em;
+		border-radius: 20px;
+		height: 72px;
+		background-color: var(--wp--preset--color--brand-cream);
+		padding: 20px 30px;
+		box-sizing: border-box;
+		font-size: var(--wp--preset--font-size--large);
+		&::placeholder {
+			color: var(--wp--preset--color--brand-blue);
+		}
+	}
+	input[type="select-one"] {
+		display: none !important;
+	}
+	textarea {
+		height: auto;
+	}
+	input[type="submit"],
+	button {
+		font-family: var(--wp--preset--font-family--national-extra-bold);
+		padding: 10px 35px;
+		letter-spacing: 0.01em;
+		background: var(--wp--preset--color--brand-blue);
+		color: var(--wp--preset--color--brand-cream);
+		border: 0 none;
+		border-radius: 20px;
+		font-size: calc( var(--wp--preset--font-size--large) * 1.35);
+	}
+}
+
+// Formidable
+
+.frm_form_field {
+	margin-bottom: 1.2em;
+}
+// .frm_fields_container {
+// 	& > div:first-of-type() {
+// 		opacity: 0.5;
+// 	}
+// 	div:first-of-type() {
+// 		margin-top: 0;
+// 	}
+// }
+
+// TomSelect
+
+.ts-wrapper.single {
+	&.input-active {
+		.ts-control {
+			background-color: var(--wp--preset--color--brand-cream);
+		}
+	}
+	.ts-control {
+		font-family: var(--wp--preset--font-family--geometric-slab-medium);
+		color: var(--wp--preset--color--brand-blue);
+		border: 2px solid var(--wp--preset--color--brand-blue);
+		line-height: 1.2em;
+		border-radius: 20px;
+		font-size: var(--wp--preset--font-size--large);
+		height: 72px;
+		padding: 15px 30px;
+		box-sizing: border-box;
+		background-color: var(--wp--preset--color--brand-cream);
+	}
+	.ts-dropdown.single {
+		// background-color: var(--wp--preset--color--brand-cream);
+		font-family: var(--wp--preset--font-family--geometric-slab-medium);
+		color: var(--wp--preset--color--brand-blue);
+		border: 2px solid var(--wp--preset--color--brand-blue);
+		line-height: 1.2em;
+		border-radius: 20px;
+		font-size: var(--wp--preset--font-size--large);
+		// padding: 10px 30px;
+		overflow: hidden;
+		.ts-dropdown-content {
+			.option {
+				padding: 8px 30px;
+				&.selected,
+				&.active {
+					background: var(--wp--preset--color--brand-orange);
+					color: var(--wp--preset--color--brand-cream);
+				}
+			}
+		}
+	}
+}
