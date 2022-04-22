@@ -41,6 +41,7 @@
 			add_action( 'wp_head', [ $this, 'bones_theme_preload_webfonts' ] );
 			add_action( 'init', [ $this, 'bones_name_register_block_styles' ], 100 );
 			add_filter( 'body_class', [$this, 'bones_theme_body_class'], 20, 2 );
+			add_action( 'wp_footer', [$this, 'bones_theme_inline_svg'], 10 );
 		}
 
 		public function plugin_enqueue() {
@@ -197,6 +198,14 @@
 					'bottom' => __('Bottom Menu', '_themename')
 				)
 			);
+		}
+
+		public function bones_theme_inline_svg() {
+			print '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="position: absolute; left: -9999px; overflow: hidden;">
+				<clipPath id="menuClip" clipPathUnits="objectBoundingBox">
+					<path d="M0,1 H0.724 c0.04,-0.068,0.097,-0.169,0.157,-0.295 c0.082,-0.182,0.12,-0.264,0.119,-0.341 C0.982,0.17,0.742,0.042,0.652,0 H0"></path>
+				</clipPath>
+			</svg>';
 		}
 	}
 

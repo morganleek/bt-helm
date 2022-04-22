@@ -3,8 +3,8 @@
   "app/assets/home-background@2x.jpg": "app/assets/home-background@2x-50e1b32a.jpg",
   "editor.js": "app/editor-6a3f965b.js",
   "editor.js.map": "app/editor-6a3f965b.js.map",
-  "main.css": "app/main-9305845a.css",
-  "main.css.map": "app/main-9305845a.css.map",
+  "main.css": "app/main-9f47a697.css",
+  "main.css.map": "app/main-9f47a697.css.map",
   "main.js": "app/main-8a47b0ff.js",
   "main.js.map": "app/main-8a47b0ff.js.map",
   "runtime.js": "app/runtime-6974b681.js",
@@ -25,10 +25,10 @@
           "app/main-8a47b0ff.js.map"
         ],
         "css": [
-          "app/main-9305845a.css"
+          "app/main-9f47a697.css"
         ],
         "css.map": [
-          "app/main-9305845a.css.map"
+          "app/main-9f47a697.css.map"
         ]
       }
     },

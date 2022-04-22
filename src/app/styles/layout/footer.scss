@@ -4,11 +4,12 @@ footer.wp-block-template-part {
 
 .wp-site-blocks {
 	& > .overlay-navigation {
+		--wp--custom--spacing--outer: min(5.85vw, 80px);
 		// margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
 		// margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
 		// max-width: 50vw;
 		// background: var(--wp--preset--color--brand-orange);
-		width: min(50vw, 750px);
+		width: min(53vw, 725px);
 		position: fixed;
 		z-index: 9999;
 		top: 0;
@@ -28,9 +29,12 @@ footer.wp-block-template-part {
 			flex-direction: column;
 			padding-left: var(--wp--custom--spacing--outer);
 			padding-right: var(--wp--custom--spacing--outer);
-			padding-bottom: min(7.5vh, 56px);
+			padding-top: min(8vh, 62px);
+			padding-bottom: min(6.1vh, 47px);
 			transform: translate(-100%, 0);
 			transition: all 0.3s;
+			clip-path: url(#menuClip); // Added via footer SVG
+			row-gap: 25px;
 			& > * {
 				max-width: 325px;
 				width: 100%;
@@ -66,8 +70,10 @@ footer.wp-block-template-part {
 			}
 		}
 		.navigation-footer {
+			--wp--style--block-gap: 15px;
 			margin-top: auto;
 			// margin-bottom: 0;
+			align-items: flex-end;
 			justify-self: flex-end;
 			// margin-bottom: 0;
 		}
