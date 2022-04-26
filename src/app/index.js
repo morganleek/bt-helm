@@ -51,5 +51,26 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			} );
 		}
 	} );
+
+	// Questions
+	document.querySelectorAll( '.wp-block-questions a' ).forEach( ( link ) => {
+		link.addEventListener( 'click', ( e ) => {
+			e.preventDefault();
+			
+			// Current Question
+			const question = link.closest( '.questions' );
+			const i = question.dataset['question-set'];
+			const label = question.dataset['question-label'];
+
+			// Store value 
+			// Store in local db
+
+			// Show Next Question
+			question.classList.remove( 'is-visible-question' );
+			if( question.nextSibling !== null ) {
+				question.nextSibling.classList.add( 'is-visible-question' );
+			}
+		} );
+	} );
 } );
 

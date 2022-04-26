@@ -42,6 +42,7 @@
 			add_action( 'init', [ $this, 'bones_name_register_block_styles' ], 100 );
 			add_filter( 'body_class', [$this, 'bones_theme_body_class'], 20, 2 );
 			add_action( 'wp_footer', [$this, 'bones_theme_inline_svg'], 10 );
+			add_shortcode( 'helm_questions', [$this, 'bones_theme_helm_questions'] );
 		}
 
 		public function plugin_enqueue() {
@@ -206,6 +207,28 @@
 					<path d="M0,1 H0.724 c0.04,-0.068,0.097,-0.169,0.157,-0.295 c0.082,-0.182,0.12,-0.264,0.119,-0.341 C0.982,0.17,0.742,0.042,0.652,0 H0"></path>
 				</clipPath>
 			</svg>';
+		}
+
+		public function bones_theme_helm_questions( $atts, $content = '' ) {
+			$html = '';
+
+			$html .= '<div class="wp-block-questions" id="questions-surround">';
+				$html .= '<div class="questions is-visible-question" data-question-label="Person:" data-question-set="0">';
+					$html .= '<h4><a href="#">Myself</a></h4>';
+					$html .= '<h4><a href="#">My Brother</a></h4>';
+					$html .= '<h4><a href="#">My Friend</a></h4>';
+					$html .= '<h4><a href="#">My Brother</a></h4>';
+				$html .= '</div>';
+
+				$html .= '<div class="questions" data-question-label="Issue:" data-question-set="1">';
+					$html .= '<h4><a href="#">Drugs</a></h4>';
+					$html .= '<h4><a href="#">Alcohol</a></h4>';
+					$html .= '<h4><a href="#">Gambling</a></h4>';
+					$html .= '<h4><a href="#">Anger</a></h4>';
+				$html .= '</div>';
+			$html .= '</div>';
+
+			return $html;
 		}
 	}
 
