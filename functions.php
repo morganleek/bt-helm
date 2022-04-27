@@ -212,19 +212,21 @@
 		public function bones_theme_helm_questions( $atts, $content = '' ) {
 			$html = '';
 
+			$html = '<h4 class="questions-title has-text-align-center has-brand-blue-color has-text-color">I am seeking <br>Behaviour Change for&hellip;</h4>';
+
 			$html .= '<div class="wp-block-questions" id="questions-surround">';
 				$html .= '<div class="questions is-visible-question" data-question-label="Person:" data-question-set="0">';
 					$html .= '<h4><a href="#">Myself</a></h4>';
 					$html .= '<h4><a href="#">My Brother</a></h4>';
 					$html .= '<h4><a href="#">My Friend</a></h4>';
-					$html .= '<h4><a href="#">My Brother</a></h4>';
+					$html .= '<h4><a href="#">My Partner</a></h4>';
 				$html .= '</div>';
 
 				$html .= '<div class="questions" data-question-label="Issue:" data-question-set="1">';
-					$html .= '<h4><a href="#">Drugs</a></h4>';
-					$html .= '<h4><a href="#">Alcohol</a></h4>';
-					$html .= '<h4><a href="#">Gambling</a></h4>';
-					$html .= '<h4><a href="#">Anger</a></h4>';
+					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/drugs">Drugs</a></h4>';
+					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/alcohol">Alcohol</a></h4>';
+					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/gambling">Gambling</a></h4>';
+					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/anger">Anger</a></h4>';
 				$html .= '</div>';
 			$html .= '</div>';
 

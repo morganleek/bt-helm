@@ -1,12 +1,14 @@
 {
   "app/assets/dotted-nav@2x.png": "app/assets/dotted-nav@2x-034f9294.png",
-  "app/assets/home-background@2x.jpg": "app/assets/home-background@2x-50e1b32a.jpg",
+  "app/assets/home-background-left@2x.jpg": "app/assets/home-background-left@2x-75c42ff8.jpg",
+  "app/assets/home-background-right@2x.jpg": "app/assets/home-background-right@2x-0ae03f22.jpg",
+  "app/main.js.map": "app/main.js.map",
   "editor.js": "app/editor.js",
   "editor.js.map": "app/editor.js.map",
   "main.css": "app/main.css",
   "main.css.map": "app/main.css.map",
   "main.js": "app/main.js",
-  "main.js.map": "app/main.js.map",
+  "main.js.map": "main.0e4ef1ca625ece33864c.hot-update.js.map",
   "runtime.js": "app/runtime.js",
   "runtime.js.map": "app/runtime.js.map",
   "vendors~editor~main.js": "app/vendors~editor~main.js",
@@ -26,7 +28,8 @@
           "app/runtime.js.map",
           "app/vendors~editor~main.js.map",
           "app/vendors~main.js.map",
-          "app/main.js.map"
+          "app/main.js.map",
+          "main.0e4ef1ca625ece33864c.hot-update.js.map"
         ],
         "css": [
           "app/main.css"

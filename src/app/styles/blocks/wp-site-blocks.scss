@@ -1,5 +1,30 @@
 .wp-site-blocks {
 	body.page-home & {
-		background: url(../images/home-background@2x.jpg) 50% 50%/2000px auto no-repeat;
+		// background: url(../images/home-background@2x.jpg) 50% 50%/2000px auto no-repeat;
+		opacity: 0;
+		transition: opacity 0.3s;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			max-width: 490px;
+			background: url(../images/home-background-left@2x.jpg) 100% 50%/auto 125% no-repeat;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			top: 0;
+			right: 0;
+			max-width: 490px;
+			background: url(../images/home-background-right@2x.jpg) 0 50%/auto 125% no-repeat;
+		}
+		&.is-visible {
+			opacity: 1;
+		}
 	}
 }

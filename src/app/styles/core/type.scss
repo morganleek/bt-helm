@@ -29,6 +29,9 @@ h1, h2, h3, h4, h5, h6 {
 	&.is-style-narrow {
 		max-width: min(670px, 54.3vw);
 	}
+	&.is-hidden {
+		opacity: 0;
+	}
 }
 
 p {

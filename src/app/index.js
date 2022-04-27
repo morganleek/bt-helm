@@ -57,20 +57,64 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		link.addEventListener( 'click', ( e ) => {
 			e.preventDefault();
 			
+
 			// Current Question
 			const question = link.closest( '.questions' );
-			const i = question.dataset['question-set'];
-			const label = question.dataset['question-label'];
+			
+			const i = parseInt( question.dataset.questionSet ) + 1;
+			const label = question.dataset.questionLabel;
+			const answer = e.target.innerHTML;
 
-			// Store value 
-			// Store in local db
+			// Store questions and answer for later user
+			localStorage.setItem( 'question-' + i + '-label', label );
+			localStorage.setItem( 'question-' + i + '-answer', answer );
 
 			// Show Next Question
 			question.classList.remove( 'is-visible-question' );
 			if( question.nextSibling !== null ) {
 				question.nextSibling.classList.add( 'is-visible-question' );
 			}
+			else {
+				document.querySelector( '.questions-title' )?.classList.add( 'is-hidden' );
+				if( e.target.dataset['redirect'] ) {
+					window.location = e.target.dataset['redirect'];
+				}
+			}
 		} );
 	} );
 } );
 
+window.addEventListener( 'load', () => {
+	// Landing Splash
+	if( document.querySelector( 'body.page-home' ) ) {
+		// Check if has been loaded before
+		if( localStorage.getItem( 'helm-splash-loaded' ) ) {
+			// Do nothing other than loading the normal page
+			document.querySelector( '.wp-site-blocks' )?.classList.add( 'is-visible' );
+		}
+		else {
+			if( document.querySelector( '.wp-block-template-part.overlay-splash' ) ) {
+				// Show Spash
+				document.querySelector( '.wp-block-template-part.overlay-splash' ).classList.add( 'is-visible' );
+
+				// Load page behind
+				setTimeout( () => {
+					document.querySelector( '.wp-site-blocks' )?.classList.add( 'is-visible' );
+				}, 500 );
+
+				// Hide after two seconds
+				setTimeout( () => {
+					document.querySelector( '.wp-block-template-part.overlay-splash' ).classList.remove( 'is-visible' );
+				}, 4000 );
+				
+	
+			}
+			else {
+				// Make visible if something has gone wrong
+				document.querySelector( '.wp-site-blocks' )?.classList.add( 'is-visible' );
+			}
+			// Set localStorage marker
+			localStorage.setItem( 'helm-splash-loaded', true );
+		}
+	}
+} );

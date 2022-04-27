@@ -2,6 +2,7 @@
 	max-width: 474px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 2em;
 	& > .questions {
 		border: 3px solid var(--wp--preset--color--brand-blue);
 		border-radius: 25px;
@@ -10,6 +11,7 @@
 			display: none;
 		}
 		h4 {
+			font-size: clamp(1.8rem, 1.5383rem + 1.1630vw, 2.53125rem);
 			padding: 0;
 			margin: 0;
 			&:last-child {
@@ -22,10 +24,10 @@
 			}
 			a {
 				display: block;
-				background: url(../images/dotted-nav@2x.png) 0 100%/14px 2px repeat-x;
+				background: url(../images/dotted-nav@2x.png) 0 100%/18px 2px repeat-x;
 				text-decoration: none;
 				text-align: center;
-				padding: 0.25em 1em;
+				padding: 0.35em 1em;
 				position: relative;
 				&::before {
 					content: '';

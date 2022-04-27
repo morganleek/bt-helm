@@ -22,6 +22,13 @@
 			"postTypes": [
 				"page"
 			]
+		},
+		{
+			"name": "page-home-landing",
+			"title": "Home (Splash)",
+			"postTypes": [
+				"page"
+			]
 		}
 	],
 	"settings": {
@@ -159,7 +166,8 @@
 					"huge": "clamp(2.25rem, 4vw, 2.75rem)",
 					"gigantic": "clamp(2rem, 0.9041rem + 4.8708vw, 5.0625rem)",
 					"colossal": "clamp(5.49125rem, 3.7436rem + 7.7674vw, 10.375rem)",
-					"heading-3": "clamp(2rem, 1.3514rem + 2.8827vw, 3.8125rem)"
+					"heading-3": "clamp(2rem, 1.3514rem + 2.8827vw, 3.8125rem)",
+					"heading-4": "clamp(1.8rem, 1.3607rem + 1.9523vw, 3.0275rem)"
 				},
 				"line-height": {
 					"tiny": 0.95,
@@ -325,7 +333,7 @@
 					"fontFamily": "var(--wp--preset--font-family--national-extra-bold)",
 					"fontWeight": "300",
 					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
-					"fontSize": "var(--wp--preset--font-size--x-large)"
+					"fontSize": "var(--wp--custom--typography--font-size--heading-4)"
 				}
 			},
 			"h5": {
