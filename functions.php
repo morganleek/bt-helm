@@ -38,7 +38,7 @@
 			add_action( 'wp_enqueue_scripts', [ $this, 'plugin_enqueue' ] );
 			add_action( 'after_setup_theme', [ $this, 'bones_theme_support' ] );
 			add_action( 'admin_init', [$this, 'bones_theme_font_styles' ] );
-			add_action( 'wp_head', [ $this, 'bones_theme_preload_webfonts' ] );
+			add_action( 'wp_head', [ $this, 'bones_theme_load_favicons' ] );
 			add_action( 'init', [ $this, 'bones_name_register_block_styles' ], 100 );
 			add_filter( 'body_class', [$this, 'bones_theme_body_class'], 20, 2 );
 			add_action( 'wp_footer', [$this, 'bones_theme_inline_svg'], 10 );
@@ -131,8 +131,9 @@
 			";
 		}
 
-		public function bones_theme_preload_webfonts() {
-			// print '<link rel="preload" href="' . esc_url( get_theme_file_uri( 'assets/fonts/SourceSerif4Variable-Roman.ttf.woff2' ) ) . '" as="font" type="font/woff2" crossorigin>';
+		public function bones_theme_load_favicons() {
+			print '<link rel="icon" href="' . get_theme_file_uri( 'assets/favicons/favicon.ico' ) . '" sizes="any">';
+			print '<link rel="icon" href="' . get_theme_file_uri( 'assets/favicons/favicon.svg' ) . '" type="image/svg+xml">';
 		}
 
 		public function bones_name_register_block_styles() {
