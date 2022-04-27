@@ -11,10 +11,17 @@ body {
 }
 
 .logo-wrapper {
-	width: 318px;
+	display: block;
+	font-size: 0;
+	padding-top: 28px;
+	padding-bottom: 20px;
 	#helm-logo-group {
-		max-width: 305px;
+		min-width: 185px;
+		max-width: min(22.32vw, 305px);
 		width: 100%;
+		svg {
+			display: block;
+		}
 		.logo-fill {
 
 			fill: var(--header--featured-color);
@@ -28,16 +35,26 @@ body {
 }
 
 header.wp-block-template-part {
-	--wp--custom--spacing--outer: max(2.375rem, 2.78vw);
+	--wp--custom--spacing--outer: 20px;
+	@media (min-width: 782px) { 
+		--wp--custom--spacing--outer: min(2.375rem, 2.78vw);
+	}
 	.header-inner {
 		padding-left: var(--wp--custom--spacing--outer);
 		padding-right: var(--wp--custom--spacing--outer);
-		padding-top: 35px; // var(--wp--custom--spacing--outer);
 		width: 100%;
 		max-width: var(--wp--custom--sizing--wide);
 		margin-left: auto;
 		margin-right: auto;
-		align-items: flex-start;
+		align-items: center; // flex-start;
+		padding-top: 0;
+		padding-bottom: 0;
+		// padding-top: 28px;
+		// padding-bottom: 14px;
+		// @media (min-width: 768px) { 
+		// 	padding-top: 35px; // var(--wp--custom--spacing--outer);
+		// 	padding-bottom: 0; // 35px;
+		// }
 	}
 
 	.menu-toggle { // Hamburger
@@ -46,11 +63,15 @@ header.wp-block-template-part {
 		font-family: var(--wp--preset--font-family--geometric-slab-bold);
 		display: flex;
 		align-items: center;
-		a {
+		& > a {
 			color: var(--header--featured-color);
 			transition: color 0.3s;
-			// text-decoration: none;
 			padding-top: 2px;
+			display: none;
+			// text-decoration: none;
+			@media (min-width: 768px) { 
+				display: inline-block;
+			}
 		}
 		.hamburger {
 			padding-top: 0;

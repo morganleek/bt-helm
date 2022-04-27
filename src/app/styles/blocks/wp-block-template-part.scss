@@ -31,10 +31,12 @@
 					top: 0;
 					left: 0;
 					max-height: none;
+					padding-top: min(5.7vh, 44px);
+					padding-bottom: min(11.7vh, 90px);
 					.wp-block-cover__image-background,
 					.wp-block-cover__video-background {
 						object-fit: contain;
-						transform: scale(1.1);
+						transform: scale(1.15);
 					}
 					.wp-block-cover__inner-container {
 						height: 100%;
@@ -57,4 +59,28 @@ header.wp-block-template-part {
 	left: 0;
 	right: 0;
 	z-index: 100;
+	background: var(--wp--preset--color--brand-cream);
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+		box-shadow: 0 7px 5px rgba(0, 0, 0, 0.25);
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+	&.show-shadow {
+		&::before {
+			opacity: 1;
+		}
+	}
+	@media (min-width: 768px) { 
+		background: transparent;
+		&::before {
+			display: none;
+		}
+	}
 }

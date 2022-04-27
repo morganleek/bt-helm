@@ -1,14 +1,15 @@
 @use "../core/mixins";
 
 .wp-block-media-text {
-	@media (min-width: 600px) {
-		&.is-stacked-on-mobile {
-			grid-template-columns: 1fr;
+	&.is-stacked-on-mobile {
+		@media (min-width: 600px) {
+			grid-template-columns: 1fr !important;
 			grid-template-rows: auto auto;
 			.wp-block-media-text__media {
 				grid-column: 1;
 				grid-row: 1;
-				min-height: max(250px, 22.4vw);
+				// min-height: max(250px, 22.4vw);
+				min-height: min(250px, 28vw);
 			}
 			.wp-block-media-text__content {
 				@include mixins.trim;

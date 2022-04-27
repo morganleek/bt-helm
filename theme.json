@@ -218,7 +218,7 @@
 					"slug": "small"
 				},
 				{
-					"size": "clamp(0.75rem, 0.5711rem + 0.7952vw, 1.25rem)", 
+					"size": "clamp(1rem, 0.5711rem + 0.7952vw, 1.25rem)", 
 					"slug": "medium"
 				},
 				{
@@ -361,7 +361,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "5.5rem"
+			"blockGap": "min(5.5rem, 6.44vw)"
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--geometric-slab-light)",

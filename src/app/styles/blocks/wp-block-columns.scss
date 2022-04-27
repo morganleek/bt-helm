@@ -1,14 +1,25 @@
 @use "../core/mixins";
 
 .wp-block-columns {
+	gap: 24px;
 	.wp-block-column {
 		@include mixins.trim;
 		// li:first-child:nth-last-child(3),
 		// li:first-child:nth-last-child(3) ~ li {
 		// 		width: 33.3333%;
 		// }
-		&:nth-last-child(3) ~ .wp-block-column {
-			margin-left: 24px;
+		margin-left: 0 !important;
+		// &:nth-last-child(3) ~ .wp-block-column {
+		// 	margin-left: 0;
+		// }
+	}
+
+	&:not(.is-not-stacked-on-mobile) {
+		& > .wp-block-column:not(:only-child) {
+			@media (min-width: 600px) and (max-width: 781px) {
+				flex-basis: auto;
+				// flex-grow: 1;
+			}
 		}
 	}
 }
@@ -18,7 +29,9 @@
 		& > .wp-block-column {
 			--wp--style--block-gap: min(4vw, 56px);
 			&:first-child {
-				padding-left: min(5vw, 65px);
+				@media (min-width: 782px) { 
+					padding-left: min(5vw, 65px);
+				}
 			}
 		}
 	}

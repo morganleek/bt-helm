@@ -2,15 +2,29 @@
 
 .wp-block-cover {
 	max-height: 783px;
-	padding: 1.25em var(--wp--custom--padding--horizontal);	
+	padding: 0 var(--wp--custom--padding--horizontal);
+	// padding: 1.25em var(--wp--custom--padding--horizontal);	
 	&.alignfull {
 		& + .wp-block-group.alignfull {
 			margin-top: 0;
 		}
 	}
 	&.is-style-background-contained {
+		// min-height: min(57.4vw, 33.33vh);
+		min-height: min(57.4vw, 100vh);
+		@media (min-width: 768px) { 
+			// padding-top: 5.625rem;
+			// padding-bottom: 5.625rem;
+		}
+		@media (min-width: 768px) { 
+		}
 		img.wp-block-cover__image-background {
 			object-fit: contain;
+		}
+		.wp-block-spacer {
+			@media (max-width: 767px) { 
+				display: none;
+			}
 		}
 	}
 	p {

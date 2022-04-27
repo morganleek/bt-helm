@@ -9,7 +9,7 @@ import './style.scss';
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	// Navgation Appearance
-	document.querySelectorAll( '.menu-toggle > *' ).forEach( ( item ) => {
+	document.querySelectorAll( '.menu-toggle > *, .overlay-close .wp-block-button__link' ).forEach( ( item ) => {
 		item.addEventListener( 'click', ( e ) => {
 			const isActive = document.body.classList.toggle( 'toggle-navigation' );
 			document.querySelector( '.hamburger' )?.classList.toggle( 'is-active', isActive );
@@ -27,6 +27,22 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	
 	// Logo Fill Colour
 	ScrollTrigger.matchMedia( {
+		"(max-width: 767px)": function() {
+			const header = document.querySelector( 'header.wp-block-template-part' );
+			if( header ) {
+				const start = header.offsetHeight - 1;
+				gsap.timeline( {
+					scrollTrigger: {
+						trigger: 'main',
+						start: "start " + start + "px",
+						end: "bottom bottom",
+						scrub: 1,
+						toggleClass: { targets: header, className: 'show-shadow' },
+						// markers: true
+					}
+				} );
+			}
+		},
 		"(min-width: 768px)": function() {
 			document.querySelectorAll( '.wp-block-post-content > .has-background' ).forEach( ( block ) => {
 				const colReg = /has-(.[^\s]*)-background-color/i;

@@ -3,21 +3,44 @@ footer.wp-block-template-part {
 }
 
 .wp-site-blocks {
+	& > .overlay-close {
+		// Navigation shape shows close button but doesn't 
+		// allow it to be clicked. This is a second close button 
+		// with z increment
+		position: fixed;
+		z-index: 9991;
+		top: 0;
+		right: 10px;
+		pointer-events: none;
+		.toggle-navigation & {
+			pointer-events: all;
+		}
+		.wp-block-buttons .wp-block-button .wp-block-button__link {
+			padding: 0;
+			width: 60px;
+			height: 50px;
+			opacity: 0;
+		}
+	}
 	& > .overlay-navigation {
 		--wp--custom--spacing--outer: min(5.85vw, 80px);
 		// margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
 		// margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
 		// max-width: 50vw;
 		// background: var(--wp--preset--color--brand-orange);
-		width: min(53vw, 725px);
+		// 250 725
 		position: fixed;
-		z-index: 9999;
+		z-index: 9990;
 		top: 0;
 		left: 0;
 		bottom: 0;
 		right: auto;
 		margin: 0 !important;
 		pointer-events: none;
+		width: min(95vw, 408px);
+		@media (min-width: 768px) { 
+			width: min(53vw, 725px);
+		}
 		& > .wp-block-group.overlay-navigation-wrapper.has-background {
 			margin: 0 !important;
 			position: absolute;
@@ -28,7 +51,8 @@ footer.wp-block-template-part {
 			display: flex;
 			flex-direction: column;
 			padding-left: var(--wp--custom--spacing--outer);
-			padding-right: var(--wp--custom--spacing--outer);
+			padding-right: 30.5%;
+			// padding-right: var(--wp--custom--spacing--outer);
 			padding-top: min(8vh, 62px);
 			padding-bottom: min(6.1vh, 47px);
 			transform: translate(-100%, 0);
@@ -79,6 +103,9 @@ footer.wp-block-template-part {
 		}
 	}
 	.wp-block-social-links {
+		@media (max-width: 599px) {
+			justify-content: flex-start;
+		}
 		@media (min-width: 600px) {
 			margin-top: 0;
 		}

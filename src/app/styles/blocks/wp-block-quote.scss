@@ -4,10 +4,12 @@
 	@include mixins.trim;
 	// max-width: 320px;
 	& > * {
-		max-width: 320px;
 		width: 100%;
 		display: block;
-		margin-left: min(12.7vw, 173px);
+		@media (min-width: 782px) { 
+			max-width: 320px;
+			margin-left: min(12.7vw, 173px);
+		}
 	}
 	p {
 		font-family: var(--wp--preset--font-family--national-extra-bold);
