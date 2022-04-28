@@ -16,6 +16,10 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	} );	
 
+	// iOS window height work around  
+  window.addEventListener( 'resize', bones_theme_window_height );
+  bones_theme_window_height();
+
 	// Style form selects
 	document.querySelectorAll( '.wp-site-blocks select').forEach( ( select ) => {
 		new TomSelect( select, {
@@ -99,6 +103,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	} );
 } );
+
+// iOS window height
+const bones_theme_window_height = () => {
+  const doc = document.documentElement
+  doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+}
 
 window.addEventListener( 'load', () => {
 	// Landing Splash

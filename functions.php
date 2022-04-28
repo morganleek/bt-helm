@@ -43,6 +43,7 @@
 			add_filter( 'body_class', [$this, 'bones_theme_body_class'], 20, 2 );
 			add_action( 'wp_footer', [$this, 'bones_theme_inline_svg'], 10 );
 			add_shortcode( 'helm_questions', [$this, 'bones_theme_helm_questions'] );
+			add_filter( 'excerpt_length', [$this, 'bones_theme_excerpt_length'], 50 );
 		}
 
 		public function plugin_enqueue() {
@@ -232,6 +233,10 @@
 			$html .= '</div>';
 
 			return $html;
+		}
+
+		public function bones_theme_excerpt_length( $length ) {
+			return 15;
 		}
 	}
 

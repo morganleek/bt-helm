@@ -14,13 +14,17 @@ form {
 		border: 2px solid var(--wp--preset--color--brand-blue);
 		line-height: 1.2em;
 		border-radius: 20px;
-		height: 72px;
+		// height: 72px;
 		background-color: var(--wp--preset--color--brand-cream);
-		padding: 20px 30px;
 		box-sizing: border-box;
 		font-size: var(--wp--preset--font-size--large);
+		padding: clamp(0.625rem, 0.4013rem + 0.9940vw, 1.25rem) clamp(1rem, 0.6869rem + 1.3917vw, 1.875rem);
+		// 10px 16px // 20px 30px
 		&::placeholder {
 			color: var(--wp--preset--color--brand-blue);
+		}
+		&:focus-visible {
+			outline-color: var(--wp--preset--color--brand-orange);
 		}
 	}
 	input[type="select-one"] {
@@ -28,6 +32,7 @@ form {
 	}
 	textarea {
 		height: auto;
+		resize: none;
 	}
 	input[type="submit"],
 	button {
@@ -45,7 +50,10 @@ form {
 // Formidable
 
 .frm_form_field {
-	margin-bottom: 1.2em;
+	margin-bottom: 0.8em;
+	@media (min-width: 768px) { 
+		margin-bottom: 1.2em;
+	}
 }
 // .frm_fields_container {
 // 	& > div:first-of-type() {
@@ -71,8 +79,9 @@ form {
 		line-height: 1.2em;
 		border-radius: 20px;
 		font-size: var(--wp--preset--font-size--large);
-		height: 72px;
-		padding: 15px 30px;
+		// height: 72px;
+		// 10 20 // 15 30
+		padding: clamp(0.625rem, 0.5132rem + 0.4970vw, 0.9375rem) clamp(1.25rem, 1.0263rem + 0.9940vw, 1.875rem);
 		box-sizing: border-box;
 		background-color: var(--wp--preset--color--brand-cream);
 	}

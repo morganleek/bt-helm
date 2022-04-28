@@ -226,7 +226,7 @@
 					"slug": "large"
 				},
 				{
-					"size": "clamp(1.26375rem, 0.4024rem + 3.8280vw, 3.670625rem)",
+					"size": "clamp(1.75rem, 1.0627rem + 3.0547vw, 3.670625rem)",
 					"slug": "extra-large"
 				}
 			]
@@ -250,14 +250,6 @@
 					"fontFamily": "var(--wp--preset--font-family--national-extra-bold)",
 					"fontSize": "clamp(1.2rem, 0.9137rem + 1.2724vw, 2rem)",
 					"lineHeight": "1em"
-				}
-			},
-			"core/post-title": {
-				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
-					"fontWeight": "300",
-					"lineHeight": "var(--wp--custom--typography--line-height--tiny)",
-					"fontSize": "var(--wp--custom--typography--font-size--gigantic)"
 				}
 			},
 			"core/post-comments": {

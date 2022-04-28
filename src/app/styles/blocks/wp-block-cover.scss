@@ -11,15 +11,19 @@
 	}
 	&.is-style-background-contained {
 		// min-height: min(57.4vw, 33.33vh);
-		min-height: min(57.4vw, 100vh);
-		@media (min-width: 768px) { 
+		min-height: calc( var(--app-height, 100vh) - 92px ); // Remove menu height
+		@media (min-width: 450px) { 
+			min-height: min(57.4vw, 100vh);
 			// padding-top: 5.625rem;
 			// padding-bottom: 5.625rem;
 		}
 		@media (min-width: 768px) { 
 		}
 		img.wp-block-cover__image-background {
-			object-fit: contain;
+			object-fit: cover;
+			@media (min-width: 450px) {
+				object-fit: contain;
+			}
 		}
 		.wp-block-spacer {
 			@media (max-width: 767px) { 

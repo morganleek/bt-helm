@@ -1,0 +1,14 @@
+.wp-block-post-featured-image {
+	height: 75vh;
+	max-height: 677px;
+	overflow: hidden;
+	position: relative;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		object-fit: cover;
+	}
+}

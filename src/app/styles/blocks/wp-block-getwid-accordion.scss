@@ -1,0 +1,56 @@
+@use "../core/mixins";
+
+.wp-block-getwid-accordion {
+	& > div {
+		&:nth-child( 4n + 1 ) {
+			&::before {
+				background-color: var(--wp--preset--color--brand-yellow);
+				opacity: 0.3;
+			}
+		}
+	}
+	.wp-block-getwid-accordion__header-wrapper {
+		position: relative;
+		border: 0 none !important;
+		&::before {
+			content: '';
+			width: 100vw;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+	}
+	.wp-block-getwid-accordion__content {
+		@include mixins.trim;
+		border: 0 none !important;
+		p {
+			margin-top: 0.75em;
+			margin-bottom: 0.75em;
+		}
+	}
+	.wp-block-getwid-accordion__header {
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+		&::before {
+			content: '';
+
+		}
+		
+		a {
+			&::before {
+				content: '';
+				width: 1px;
+				height: 100%;
+				display: block !important;
+			}
+			.wp-block-getwid-accordion__icon {
+				margin-left: 0;
+				margin-right: 15px;
+			}
+			// justify-content: center;
+		}
+	}
+}
