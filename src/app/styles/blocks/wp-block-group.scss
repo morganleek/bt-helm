@@ -19,4 +19,13 @@ main.wp-block-group {
 			}
 		}
 	}
+	.wp-block-post-content {
+		& > * {
+			&:last-child {
+				&:not(.alignfull) {
+					margin-bottom: var( --wp--style--block-gap );
+				}
+			}
+		}
+	}
 }

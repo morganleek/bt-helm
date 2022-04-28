@@ -2,13 +2,20 @@
 
 .wp-block-quote {
 	@include mixins.trim;
+	border-left: 0 none;
 	// max-width: 320px;
 	& > * {
 		width: 100%;
 		display: block;
 		@media (min-width: 782px) { 
-			max-width: 320px;
+			max-width: 385px;
 			margin-left: min(12.7vw, 173px);
+		}
+	}
+	&.has-text-align-center {
+		p {
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 	p {
@@ -43,5 +50,7 @@
 		color: var(--wp--preset--color--brand-purple);
 		font-size: clamp(1.1rem, 0.8978rem + 0.8986vw, 1.665rem);
 		margin-top: 0.5em;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

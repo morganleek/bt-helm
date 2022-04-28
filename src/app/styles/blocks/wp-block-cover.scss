@@ -31,9 +31,6 @@
 			}
 		}
 	}
-	p {
-		// font-family: var(--wp--preset--font-family--national-extra-bold);
-	}
 	.wp-block-cover__inner-container {
 		--wp--custom--typography--font-size--gigantic: clamp(1.7725rem, 0.3491rem + 6.3260vw, 5.75rem);
 		@include mixins.trim;
@@ -45,7 +42,7 @@
 			margin: 0;
 		}
 		
-		& > * {
+		& > *:not(.wp-block-quote) {
 			@media (min-width: 768px) { 
 				padding-left: min(2.635vw, 36px);
 			}

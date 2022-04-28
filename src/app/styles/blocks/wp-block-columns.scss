@@ -4,10 +4,12 @@
 	gap: 24px;
 	.wp-block-column {
 		@include mixins.trim;
-		// li:first-child:nth-last-child(3),
-		// li:first-child:nth-last-child(3) ~ li {
-		// 		width: 33.3333%;
-		// }
+		@media (min-width: 782px) { 
+			li:first-child:nth-last-child(2),
+			li:first-child:nth-last-child(2) ~ li {
+					opacity: 0.5;
+			}
+		}
 		margin-left: 0 !important;
 		// &:nth-last-child(3) ~ .wp-block-column {
 		// 	margin-left: 0;
