@@ -5,7 +5,8 @@ body {
 	--header--featured-color: var(--wp--preset--color--brand-blue);
 	&.logo-fill-background-brand-purple,
 	&.logo-fill-background-brand-orange,
-	&.logo-fill-background-brand-blue {
+	&.logo-fill-background-brand-blue,
+	&.logo-fill-background-vertical-orange-to-purple {
 		--header--featured-color: var(--wp--preset--color--brand-cream);
 	}
 }

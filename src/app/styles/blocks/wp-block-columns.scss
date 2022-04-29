@@ -19,7 +19,7 @@
 	&:not(.is-not-stacked-on-mobile) {
 		& > .wp-block-column:not(:only-child) {
 			@media (min-width: 600px) and (max-width: 781px) {
-				flex-basis: auto;
+				flex-basis: auto !important;
 				// flex-grow: 1;
 			}
 		}
@@ -28,6 +28,9 @@
 
 .wp-block-post-content {
 	& > .wp-block-columns {
+		@media (min-width: 782px) { 
+			padding-left: min(5vw, 65px);
+		}
 		& > .wp-block-column {
 			--wp--style--block-gap: min(4vw, 56px);
 			&:first-child {

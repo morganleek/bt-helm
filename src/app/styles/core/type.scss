@@ -55,6 +55,9 @@ p {
     margin-bottom: 0.35em;
     letter-spacing: 0;
 	}
+	&.is-style-narrow {
+		max-width: 480px;
+	}
 }
 
 

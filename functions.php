@@ -143,6 +143,11 @@
 				'name' => 'stacked',
 				'label' => __( 'Stacked', 'bones_name' )
 			] );
+
+			register_block_style( 'core/media-text', [
+				'name' => 'text-over',
+				'label' => __( 'Text Over', 'bones_name' )
+			] );
 	
 			// Cover
 			register_block_style( 'core/cover', [
@@ -155,11 +160,22 @@
 				'name' => 'oversized',
 				'label' => __( 'Oversized', 'bones_name' ),
 			] );
+			
+			register_block_style( 'core/image', [
+				'name' => 'negative-margin',
+				'label' => __( 'Negative Margin', 'bones_name' ),
+			] );
 
 			// Header
 			register_block_style( 'core/heading', [
 				'name' => 'narrow',
 				'label' => __( 'Narrow', 'bones_name' ),
+			] );
+
+			// Block Quote
+			register_block_style( 'core/quote', [
+				'name' => 'red-text',
+				'label' => __( 'Red Text', 'bones_name' ),
 			] );
 	
 			// Columns

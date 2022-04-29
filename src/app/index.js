@@ -56,18 +56,27 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				if( matches !== null ) {
 					backgroundColour = matches[1];
 				}
-
-				gsap.timeline( {
-					scrollTrigger: {
-						trigger: block,
-						start: "start start+=1",
-						end: "bottom-=75 start",
-						scrub: 1,
-						toggleClass: { targets: document.body, className: 'logo-fill-background-' + backgroundColour },
-						// once: true,
-						// markers: true,
+				else {
+					const colRegGrad = /has-(.[^\s]*)-gradient-background/i;
+					const matchesGrad = classes.match( colRegGrad );
+					if( matchesGrad !== null ) {
+						backgroundColour = matchesGrad[1];
 					}
-				} );
+				}
+
+				if( backgroundColour !== '' ) {
+					gsap.timeline( {
+						scrollTrigger: {
+							trigger: block,
+							start: "start start+=1",
+							end: "bottom-=75 start",
+							scrub: 1,
+							toggleClass: { targets: document.body, className: 'logo-fill-background-' + backgroundColour },
+							// once: true,
+							// markers: true,
+						}
+					} );
+				}
 			} );
 		}
 	} );

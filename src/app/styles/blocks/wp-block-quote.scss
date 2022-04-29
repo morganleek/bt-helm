@@ -3,6 +3,14 @@
 .wp-block-quote {
 	@include mixins.trim;
 	border-left: 0 none;
+	&.is-style-red-text {
+		p, cite {
+			color: var(--wp--preset--color--brand-orange);
+			&:not(.has-text-color) {
+				color: var(--wp--preset--color--brand-orange);
+			}
+		}
+	}
 	// max-width: 320px;
 	& > * {
 		width: 100%;

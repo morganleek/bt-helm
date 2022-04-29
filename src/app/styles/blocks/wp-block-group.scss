@@ -24,6 +24,9 @@ main.wp-block-group {
 			&:last-child {
 				&:not(.alignfull) {
 					margin-bottom: var( --wp--style--block-gap );
+					.home & {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}

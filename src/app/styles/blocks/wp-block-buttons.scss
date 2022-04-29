@@ -4,6 +4,13 @@
 			// font-family: var(--wp--preset--font-family--national-extra-bold);
 			padding: 7px 35px;
 			letter-spacing: 0.01em;
+			transition: color 0.3s;
+			&:visited {
+				color: var(--wp--preset--color--brand-cream);
+			}
+			&:hover {
+				color: #fff;
+			}
 		}
 	}
 }

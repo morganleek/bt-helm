@@ -108,6 +108,11 @@
 					"slug": "brand-orange",
 					"color": "#f25945",
 					"name": "Orange"
+				},
+				{
+					"slug": "brand-yellow-30",
+					"color": "rgba(241, 223, 87, 0.3)",
+					"name": "Yellow"
 				}
 			]
 		},
@@ -321,7 +326,7 @@
 			"blockGap": "clamp(2.5rem, 1.4264rem + 4.7714vw, 5.5rem)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--geometric-slab-light)",
+			"fontFamily": "var(--wp--preset--font-family--geometric-slab-medium)",
 			"lineHeight": "var(--wp--custom--typography--line-height--normal)",
 			"fontSize": "var(--wp--preset--font-size--medium)"
 		}
