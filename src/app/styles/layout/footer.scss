@@ -60,7 +60,7 @@ footer.wp-block-template-part {
 			clip-path: url(#menuClip); // Added via footer SVG
 			row-gap: 25px;
 			& > * {
-				max-width: 325px;
+				max-width: 380px; // 325px;
 				width: 100%;
 			}
 		}

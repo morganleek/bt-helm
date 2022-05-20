@@ -69,3 +69,8 @@ p {
 		}
 	}
 }
+
+:where(p.has-text-color:not(.has-link-color)) a {
+	color: inherit !important;
+	text-decoration: none;
+}

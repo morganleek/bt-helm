@@ -244,7 +244,8 @@
 					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/drugs">Drugs</a></h4>';
 					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/alcohol">Alcohol</a></h4>';
 					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/gambling">Gambling</a></h4>';
-					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/anger">Anger</a></h4>';
+					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/emotions">Emotions</a></h4>';
+					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/other-difficulties-in-life">Other Difficulties in Life</a></h4>';
 				$html .= '</div>';
 			$html .= '</div>';
 
