@@ -41,6 +41,13 @@ header.wp-block-template-part {
 		// }
 	}
 
+	img[src$=".svg"] {
+		min-width: 185px;
+		max-width: min(22.32vw, 305px);
+		width: 100%;
+		opacity: 1;
+		height: auto;
+	}
 	svg {
 		min-width: 185px;
 		max-width: min(22.32vw, 305px);

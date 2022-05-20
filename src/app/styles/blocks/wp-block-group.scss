@@ -31,4 +31,11 @@ main.wp-block-group {
 			}
 		}
 	}
+	[data-type="core/post-content"] {
+		& > p {
+			&:first-child {
+				margin-top: 100px;
+			}
+		}
+	}
 }
