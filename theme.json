@@ -81,7 +81,7 @@
 				},
 				{
 					"slug": "background",
-					"color": "#ffffff",
+					"color": "#fff5c7",
 					"name": "Background"
 				},
 				{
@@ -262,7 +262,7 @@
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--background)",
+			"background": "var(--wp--preset--color--brand-cream)",
 			"text": "var(--wp--preset--color--foreground)"
 		},
 		"elements": {

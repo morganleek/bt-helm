@@ -16,14 +16,15 @@ body {
 	font-size: 0;
 	padding-top: 28px;
 	padding-bottom: 20px;
-	#helm-logo-group {
+	svg {
 		min-width: 185px;
 		max-width: min(22.32vw, 305px);
 		width: 100%;
+		opacity: 1;
 		svg {
 			display: block;
 		}
-		.logo-fill {
+		.logo-fill, .cls-1 {
 
 			fill: var(--header--featured-color);
 			transition: all 0.3s;
