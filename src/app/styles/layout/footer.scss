@@ -82,7 +82,11 @@ footer.wp-block-template-part {
 						width: 100%;
 						background: url(../images/dotted-nav@2x.png) 0 100%/14px 2px repeat-x;
 						&.has-extra-large-font-size {
-							font-size: clamp(2.53125rem, 1.7747rem + 3.3623vw, 4.64528125rem) !important;
+							// font-size: clamp(2.53125rem, 1.7747rem + 3.3623vw, 4.64528125rem) !important;
+							// font-size: clamp(2.125rem, 1.7747rem + 3.3623vw, 4rem) !important;
+							// font-size: clamp(2.125rem, 1.1277rem + 1.9947vw, 4rem) !important;
+							// font-size: clamp(2.125rem, 1.4648rem + 1.3204vw, 4rem) !important;
+							font-size: clamp(2.3rem, -0.2143rem + 5.2381vw, 4.5rem) !important;
 						}
 					}
 				}

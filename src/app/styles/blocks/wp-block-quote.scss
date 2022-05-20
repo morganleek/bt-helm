@@ -11,6 +11,30 @@
 			}
 		}
 	}
+	&.is-style-cream-text {
+		p, cite {
+			color: var(--wp--preset--color--brand-cream);
+			&:not(.has-text-color) {
+				color: var(--wp--preset--color--brand-cream);
+			}
+		}
+	}
+	&.is-style-blue-text {
+		p, cite {
+			color: var(--wp--preset--color--brand-blue);
+			&:not(.has-text-color) {
+				color: var(--wp--preset--color--brand-blue);
+			}
+		}
+	}
+	&.is-style-yello-text {
+		p, cite {
+			color: var(--wp--preset--color--brand-yellow);
+			&:not(.has-text-color) {
+				color: var(--wp--preset--color--brand-yellow);
+			}
+		}
+	}
 	// max-width: 320px;
 	& > * {
 		width: 100%;

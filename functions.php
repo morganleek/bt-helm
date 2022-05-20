@@ -177,6 +177,18 @@
 				'name' => 'red-text',
 				'label' => __( 'Red Text', 'bones_name' ),
 			] );
+			register_block_style( 'core/quote', [
+				'name' => 'cream-text',
+				'label' => __( 'Cream Text', 'bones_name' ),
+			] );
+			register_block_style( 'core/quote', [
+				'name' => 'blue-text',
+				'label' => __( 'Blue Text', 'bones_name' ),
+			] );
+			register_block_style( 'core/quote', [
+				'name' => 'yellow-text',
+				'label' => __( 'Yellow Text', 'bones_name' ),
+			] );
 	
 			// Columns
 			// register_block_style( 'core/columns', [
