@@ -1,9 +1,11 @@
 {
   "app/assets/dotted-nav@2x.png": "app/assets/dotted-nav@2x-034f9294.png",
+  "app/assets/landing-left.jpg": "app/assets/landing-left-46dd1720.jpg",
+  "app/assets/landing-right.jpg": "app/assets/landing-right-a4f69f8f.jpg",
   "editor.js": "app/editor-9c718647.js",
   "editor.js.map": "app/editor-9c718647.js.map",
-  "main.css": "app/main-5a29f689.css",
-  "main.css.map": "app/main-5a29f689.css.map",
+  "main.css": "app/main-06e6e97b.css",
+  "main.css.map": "app/main-06e6e97b.css.map",
   "main.js": "app/main-38e8791c.js",
   "main.js.map": "app/main-38e8791c.js.map",
   "runtime.js": "app/runtime-6974b681.js",
@@ -24,10 +26,10 @@
           "app/main-38e8791c.js.map"
         ],
         "css": [
-          "app/main-5a29f689.css"
+          "app/main-06e6e97b.css"
         ],
         "css.map": [
-          "app/main-5a29f689.css.map"
+          "app/main-06e6e97b.css.map"
         ]
       }
     },

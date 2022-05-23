@@ -7,25 +7,43 @@
 		// background: url(../images/home-background@2x.jpg) 50% 50%/2000px auto no-repeat;
 		opacity: 0;
 		transition: opacity 0.3s;
-		// &::before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	width: 50%;
-		// 	height: 100%;
-		// 	top: 0;
-		// 	left: 0;
-		// 	max-width: 490px;
-		// 	background: url(../images/home-background-left@2x.jpg) 100% 50%/auto 125% no-repeat;
-		// }
-		// &::after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	width: 50%;
-		// 	height: 100%;
-		// 	top: 0;
-		// 	right: 0;
-		// 	max-width: 490px;
-		// 	background: url(../images/home-background-right@2x.jpg) 0 50%/auto 125% no-repeat;
+		
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			bottom: 0;
+			left: 0;
+			max-width: 750px;
+			max-height: 1080px;
+			background: url(../images/landing-left.jpg) 0 100% / 100% auto no-repeat;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			width: 50%;
+			height: var(--app-height);
+			right: 0;
+			bottom: 0;
+			right: 0;
+			max-width: 750px;
+			max-height: 1080px;
+			background: url(../images/landing-right.jpg) 100% 100% / 100% auto no-repeat;
+		}
+		// @media (max-width: 649px) {
+		// 	&::before {
+		// 		width: 75%;
+		// 		// background-position: 100% 100%;
+		// 		// background-size: auto 25%;
+		// 	}
+		// 	&::after {
+		// 		width: 75%;
+		// 		// width: 33%;
+		// 		// background-position: 0 100%;
+		// 		// background-size: 300% auto;
+		// 	}
 		// }
 		&.is-visible {
 			opacity: 1;
