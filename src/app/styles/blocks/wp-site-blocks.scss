@@ -1,13 +1,17 @@
 .wp-site-blocks {
 	padding-top: 92px;
 	@media (min-width: 768px) { 
-		padding-top: 0;
+		// padding-top: 0;
+		padding-top: 119px;
 	}
 	body.page-home & {
 		// background: url(../images/home-background@2x.jpg) 50% 50%/2000px auto no-repeat;
 		opacity: 0;
 		transition: opacity 0.3s;
-		
+		padding-top: 0;
+		@media (min-width: 768px) { 
+			padding-top: 0;
+		}	
 
 		&::before {
 			content: '';

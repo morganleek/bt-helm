@@ -77,10 +77,10 @@ header.wp-block-template-part {
 			opacity: 1;
 		}
 	}
-	@media (min-width: 768px) { 
-		background: transparent;
-		&::before {
-			display: none;
-		}
-	}
+	// @media (min-width: 768px) { 
+	// 	background: transparent;
+	// 	&::before {
+	// 		display: none;
+	// 	}
+	// }
 }

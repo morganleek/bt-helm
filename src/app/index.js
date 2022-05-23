@@ -30,56 +30,58 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	} );
 	
 	// Logo Fill Colour
-	ScrollTrigger.matchMedia( {
-		"(max-width: 767px)": function() {
-			const header = document.querySelector( 'header.wp-block-template-part' );
-			if( header ) {
-				const start = header.offsetHeight - 1;
-				gsap.timeline( {
-					scrollTrigger: {
-						trigger: 'main',
-						start: "start " + start + "px",
-						end: "bottom bottom",
-						scrub: 1,
-						toggleClass: { targets: header, className: 'show-shadow' },
-						// markers: true
-					}
-				} );
-			}
-		},
-		"(min-width: 768px)": function() {
-			document.querySelectorAll( '.wp-block-post-content > .has-background' ).forEach( ( block ) => {
-				const colReg = /has-(.[^\s]*)-background-color/i;
-				const classes = block.classList.toString();
-				const matches = classes.match( colReg );
-				let backgroundColour = '';
-				if( matches !== null ) {
-					backgroundColour = matches[1];
-				}
-				else {
-					const colRegGrad = /has-(.[^\s]*)-gradient-background/i;
-					const matchesGrad = classes.match( colRegGrad );
-					if( matchesGrad !== null ) {
-						backgroundColour = matchesGrad[1];
-					}
-				}
-
-				if( backgroundColour !== '' ) {
+	// ScrollTrigger.matchMedia( {
+		// "(max-width: 767px)": function() {
+			if( document.querySelector( '.page-template-page-home-landing' ) == null ) {
+				const header = document.querySelector( 'header.wp-block-template-part' );
+				if( header ) {
+					const start = header.offsetHeight - 1;
 					gsap.timeline( {
 						scrollTrigger: {
-							trigger: block,
-							start: "start start+=1",
-							end: "bottom-=75 start",
+							trigger: 'main',
+							start: "start " + start + "px",
+							// end: "bottom bottom",
 							scrub: 1,
-							toggleClass: { targets: document.body, className: 'logo-fill-background-' + backgroundColour },
-							// once: true,
-							// markers: true,
+							toggleClass: { targets: header, className: 'show-shadow' },
+							// markers: true
 						}
 					} );
 				}
-			} );
-		}
-	} );
+			}
+		// },
+		// "(min-width: 768px)": function() {
+		// 	document.querySelectorAll( '.wp-block-post-content > .has-background' ).forEach( ( block ) => {
+		// 		const colReg = /has-(.[^\s]*)-background-color/i;
+		// 		const classes = block.classList.toString();
+		// 		const matches = classes.match( colReg );
+		// 		let backgroundColour = '';
+		// 		if( matches !== null ) {
+		// 			backgroundColour = matches[1];
+		// 		}
+		// 		else {
+		// 			const colRegGrad = /has-(.[^\s]*)-gradient-background/i;
+		// 			const matchesGrad = classes.match( colRegGrad );
+		// 			if( matchesGrad !== null ) {
+		// 				backgroundColour = matchesGrad[1];
+		// 			}
+		// 		}
+
+		// 		if( backgroundColour !== '' ) {
+		// 			gsap.timeline( {
+		// 				scrollTrigger: {
+		// 					trigger: block,
+		// 					start: "start start+=1",
+		// 					end: "bottom-=75 start",
+		// 					scrub: 1,
+		// 					toggleClass: { targets: document.body, className: 'logo-fill-background-' + backgroundColour },
+		// 					// once: true,
+		// 					// markers: true,
+		// 				}
+		// 			} );
+		// 		}
+		// 	} );
+		// }
+	// } );
 
 	// Questions
 	document.querySelectorAll( '.wp-block-questions a' ).forEach( ( link ) => {
