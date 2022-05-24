@@ -7,6 +7,26 @@ gsap.registerPlugin( ScrollTrigger );
 // Style
 import './style.scss';
 
+// Extract Background Colour from Gutenberg Classes
+function bonesthemeExtractColour( node ) {
+	const colReg = /has-(.[^\s]*)-background-color/i;
+	const classes = node.classList.toString();
+	const matches = classes.match( colReg );
+	
+	if( matches !== null ) {
+		return matches[1];
+	}
+	else {
+		const colRegGrad = /has-(.[^\s]*)-gradient-background/i;
+		const matchesGrad = classes.match( colRegGrad );
+		if( matchesGrad !== null ) {
+			return matchesGrad[1];
+		}
+	}
+
+	return '';
+}
+
 document.addEventListener( 'DOMContentLoaded', () => {
 	// Navgation Appearance
 	document.querySelectorAll( '.menu-toggle > .hamburger, .overlay-close .wp-block-button__link' ).forEach( ( item ) => {
@@ -29,26 +49,40 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	} );
 	
+	// Nav Appearance on Scroll
+	if( document.querySelector( '.page-template-page-home-landing' ) == null ) {
+		// console.log( 'working' );
+		const header = document.querySelector( 'header.wp-block-template-part' );
+		if( header ) {
+			const start = 20; // header.offsetHeight - 1;
+			gsap.timeline( {
+				scrollTrigger: {
+					trigger: 'main',
+					start: start + "px start",
+					// end: "bottom bottom",
+					scrub: 1,
+					toggleClass: { targets: header, className: 'show-shadow' },
+					// markers: true
+				}
+			} );
+		}
+	}
+
+	// Nav Apperance before Scroll
+	if( document.querySelector( 'main > .wp-block-post-content > *:first-child' ) ) {
+		const firstBlock = document.querySelector( 'main > .wp-block-post-content > *:first-child' );
+		// Get colour from Gutenberg classes
+		const backgroundColour = bonesthemeExtractColour( firstBlock );
+		if( backgroundColour != '' ) {
+			document.body.classList.add( 'logo-fill-background-' + backgroundColour );
+		}
+	}
+
 	// Logo Fill Colour
 	// ScrollTrigger.matchMedia( {
-		// "(max-width: 767px)": function() {
-			if( document.querySelector( '.page-template-page-home-landing' ) == null ) {
-				const header = document.querySelector( 'header.wp-block-template-part' );
-				if( header ) {
-					const start = header.offsetHeight - 1;
-					gsap.timeline( {
-						scrollTrigger: {
-							trigger: 'main',
-							start: "start " + start + "px",
-							// end: "bottom bottom",
-							scrub: 1,
-							toggleClass: { targets: header, className: 'show-shadow' },
-							// markers: true
-						}
-					} );
-				}
-			}
-		// },
+	// 	"(max-width: 767px)": function() {
+			
+	// 	},
 		// "(min-width: 768px)": function() {
 		// 	document.querySelectorAll( '.wp-block-post-content > .has-background' ).forEach( ( block ) => {
 		// 		const colReg = /has-(.[^\s]*)-background-color/i;

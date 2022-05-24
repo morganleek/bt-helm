@@ -7,7 +7,12 @@ body {
 	&.logo-fill-background-brand-orange,
 	&.logo-fill-background-brand-blue,
 	&.logo-fill-background-vertical-orange-to-purple {
-		--header--featured-color: var(--wp--preset--color--brand-cream);
+		@media (min-width: 768px) { 
+			--header--featured-color: var(--wp--preset--color--brand-cream);
+		}
+	}
+	.show-shadow {
+		--header--featured-color: var(--wp--preset--color--brand-blue);
 	}
 }
 
