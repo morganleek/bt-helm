@@ -61,8 +61,7 @@ header.wp-block-template-part {
 		svg {
 			display: block;
 		}
-		.logo-fill, .cls-1 {
-
+		& > * {
 			fill: var(--header--featured-color);
 			transition: all 0.3s;
 			// body.page-alcohol & {
