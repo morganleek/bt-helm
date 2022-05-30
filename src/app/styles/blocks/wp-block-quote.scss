@@ -39,17 +39,17 @@
 	& > * {
 		width: 100%;
 		display: block;
-		// @media (min-width: 782px) { 
-		// 	&:not(.rich-text) {
-		// 		max-width: 385px;
-		// 		margin-left: min(12.7vw, 173px);
-		// 	}
-		// 	.rich-text {
-		// 		& > * {
-		// 			max-width: 385px;
-		// 		}
-		// 	}
-		// }
+		@media (min-width: 782px) { 
+			&:not(.rich-text) {
+				max-width: 600px;
+				// margin-left: min(12.7vw, 173px);
+			}
+			.rich-text {
+				& > * {
+					max-width: 600px;
+				}
+			}
+		}
 	}
 	&.has-text-align-center {
 		cite, p {
