@@ -57,3 +57,12 @@
 		}
 	}
 }
+
+.block-editor-block-list__layout.is-root-container {
+	& > .wp-block-cover {
+		&.alignfull {
+			margin-left: calc(-1*var(--wp--custom--spacing--outer)) !important;
+			margin-right: calc(-1*var(--wp--custom--spacing--outer)) !important;
+		}
+	}
+}
