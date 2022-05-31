@@ -32,7 +32,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	document.querySelectorAll( '.menu-toggle > .hamburger, .overlay-close .wp-block-button__link' ).forEach( ( item ) => {
 		item.addEventListener( 'click', ( e ) => {
 			const isActive = document.body.classList.toggle( 'toggle-navigation' );
-			document.querySelector( '.hamburger' )?.classList.toggle( 'is-active', isActive );
+			document.querySelector( '.menu-toggle .hamburger' )?.classList.toggle( 'is-active', isActive );
 		} );
 	} );	
 
