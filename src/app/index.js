@@ -28,6 +28,15 @@ function bonesthemeExtractColour( node ) {
 }
 
 document.addEventListener( 'DOMContentLoaded', () => {
+	// Sid Replace
+	
+	document.querySelectorAll( 'a[href*="{{sid}}"]' ).forEach( ( link ) => {
+		if( document.querySelector( 'meta[name="sid"]' ) ) {
+			const sid = document.querySelector( 'meta[name="sid"]' )?.attributes.content.value;
+			link.href = link.href.replace( /{{sid}}/i, sid );
+		}
+	} );
+
 	// Navgation Appearance
 	document.querySelectorAll( '.menu-toggle > .hamburger, .overlay-close .wp-block-button__link' ).forEach( ( item ) => {
 		item.addEventListener( 'click', ( e ) => {
