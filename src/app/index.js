@@ -30,12 +30,56 @@ function bonesthemeExtractColour( node ) {
 document.addEventListener( 'DOMContentLoaded', () => {
 	// Sid Replace
 	
-	document.querySelectorAll( 'a[href*="{{sid}}"]' ).forEach( ( link ) => {
+	if( document.querySelectorAll( 'a[href*="{{params}}"]' ).length > 0 ) {
+		// Generate the parameters 
+		let params = [];
+
+		// Theme 
+		const validThemes = [ 'gambling', 'drugs', 'alcohol', 'anger', 'all' ];
+		let theme = 'all'; // Default
+		if( localStorage.getItem( 'question-2-answer' ) ) {
+			// Ensure a valid response
+			theme = ( validThemes.indexOf( localStorage.getItem( 'question-2-answer' ) ) >= 0 ) ?
+				localStorage.getItem( 'question-2-answer' ) : 'all';
+		}
+		else {
+			// Check if someone is clicking from a theme page
+			validThemes.forEach( ( themeLabel ) => {
+				if( document.body.classList.contains( 'page-' + themeLabel ) ) {
+					theme = themeLabel;
+				}
+			} );
+		}
+		params.push( "theme=" + theme );
+	
+		// Session 
+		let session = 'initialConsultation'; // Default
+		if( localStorage.getItem( 'question-1-answer' ) ) {
+			const validSessions = [ 'initialConsultation', 'supportedAdvice' ];
+			// Ensure a valid response
+			session = ( validSessions.indexOf( localStorage.getItem( 'question-1-answer' ) ) >= 0 ) ?
+				localStorage.getItem( 'question-1-answer' ) : 'initialConsultation';
+		}
+		params.push( "session=" + session );
+
+		// Append SID
 		if( document.querySelector( 'meta[name="sid"]' ) ) {
 			const sid = document.querySelector( 'meta[name="sid"]' )?.attributes.content.value;
-			link.href = link.href.replace( /{{sid}}/i, sid );
+			params.push( "sid=" + sid );
 		}
-	} );
+
+		// Apply to each link
+		document.querySelectorAll( 'a[href*="{{params}}"]' ).forEach( ( link ) => {
+			link.href = link.href.replace( /{{params}}/i, params.join( "&" ) );
+		} );
+	}
+
+	// document.querySelectorAll( 'a[href*="{{sid}}"]' ).forEach( ( link ) => {
+	// 	if( document.querySelector( 'meta[name="sid"]' ) ) {
+	// 		const sid = document.querySelector( 'meta[name="sid"]' )?.attributes.content.value;
+	// 		link.href = link.href.replace( /{{sid}}/i, sid );
+	// 	}
+	// } );
 
 	// Navgation Appearance
 	document.querySelectorAll( '.menu-toggle > .hamburger, .overlay-close .wp-block-button__link' ).forEach( ( item ) => {
@@ -137,7 +181,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			
 			const i = parseInt( question.dataset.questionSet ) + 1;
 			const label = question.dataset.questionLabel;
-			const answer = e.target.innerHTML;
+			const answer = e.target.dataset.answer;
 
 			// Store questions and answer for later user
 			localStorage.setItem( 'question-' + i + '-label', label );

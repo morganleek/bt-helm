@@ -258,18 +258,18 @@
 
 			$html .= '<div class="wp-block-questions" id="questions-surround">';
 				$html .= '<div class="questions is-visible-question" data-question-label="Person:" data-question-set="0">';
-					$html .= '<h4><a href="#">Myself</a></h4>';
-					$html .= '<h4><a href="#">My Brother</a></h4>';
-					$html .= '<h4><a href="#">My Friend</a></h4>';
-					$html .= '<h4><a href="#">My Partner</a></h4>';
+					$html .= '<h4><a href="#" data-answer="initialConsultation">Myself</a></h4>';
+					$html .= '<h4><a href="#" data-answer="supportedAdvice">My Brother</a></h4>';
+					$html .= '<h4><a href="#" data-answer="supportedAdvice">My Friend</a></h4>';
+					$html .= '<h4><a href="#" data-answer="supportedAdvice">My Partner</a></h4>';
 				$html .= '</div>';
 
 				$html .= '<div class="questions" data-question-label="Issue:" data-question-set="1">';
-					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/drugs">Drugs</a></h4>';
-					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/alcohol">Alcohol</a></h4>';
-					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/gambling">Gambling</a></h4>';
-					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/emotions">Emotions</a></h4>';
-					$html .= '<h4><a href="#" data-redirect="' . get_bloginfo( 'url' ) . '/other-difficulties-in-life">Other Difficulties in Life</a></h4>';
+					$html .= '<h4><a href="#" data-answer="drugs" data-redirect="' . get_bloginfo( 'url' ) . '/drugs">Drugs</a></h4>';
+					$html .= '<h4><a href="#" data-answer="alcohol" data-redirect="' . get_bloginfo( 'url' ) . '/alcohol">Alcohol</a></h4>';
+					$html .= '<h4><a href="#" data-answer="gambling" data-redirect="' . get_bloginfo( 'url' ) . '/gambling">Gambling</a></h4>';
+					$html .= '<h4><a href="#" data-answer="anger" data-redirect="' . get_bloginfo( 'url' ) . '/emotions">Emotions</a></h4>';
+					$html .= '<h4><a href="#" data-answer="all" data-redirect="' . get_bloginfo( 'url' ) . '/other-difficulties-in-life">Other Difficulties in Life</a></h4>';
 				$html .= '</div>';
 			$html .= '</div>';
 
