@@ -54,12 +54,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	
 		// Session 
 		let session = 'initialConsultation'; // Default
-		if( localStorage.getItem( 'question-1-answer' ) ) {
-			const validSessions = [ 'initialConsultation', 'supportedAdvice' ];
-			// Ensure a valid response
-			session = ( validSessions.indexOf( localStorage.getItem( 'question-1-answer' ) ) >= 0 ) ?
-				localStorage.getItem( 'question-1-answer' ) : 'initialConsultation';
-		}
+		// if( localStorage.getItem( 'question-1-answer' ) ) {
+		// 	const validSessions = [ 'initialConsultation', 'supportedAdvice' ];
+		// 	// Ensure a valid response
+		// 	session = ( validSessions.indexOf( localStorage.getItem( 'question-1-answer' ) ) >= 0 ) ?
+		// 		localStorage.getItem( 'question-1-answer' ) : 'initialConsultation';
+		// }
 		params.push( "session=" + session );
 
 		// Append SID
