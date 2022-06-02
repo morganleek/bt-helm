@@ -6,8 +6,8 @@
   "editor.js.map": "app/editor-6a3f965b.js.map",
   "main.css": "app/main-913f34ed.css",
   "main.css.map": "app/main-913f34ed.css.map",
-  "main.js": "app/main-540d7930.js",
-  "main.js.map": "app/main-540d7930.js.map",
+  "main.js": "app/main-9e8ebad7.js",
+  "main.js.map": "app/main-9e8ebad7.js.map",
   "runtime.js": "app/runtime-6974b681.js",
   "runtime.js.map": "app/runtime-6974b681.js.map",
   "vendors~main.js": "app/vendors~main-15839e79.js",
@@ -18,12 +18,12 @@
         "js": [
           "app/runtime-6974b681.js",
           "app/vendors~main-15839e79.js",
-          "app/main-540d7930.js"
+          "app/main-9e8ebad7.js"
         ],
         "js.map": [
           "app/runtime-6974b681.js.map",
           "app/vendors~main-15839e79.js.map",
-          "app/main-540d7930.js.map"
+          "app/main-9e8ebad7.js.map"
         ],
         "css": [
           "app/main-913f34ed.css"

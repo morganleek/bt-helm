@@ -42,26 +42,27 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			theme = ( validThemes.indexOf( localStorage.getItem( 'question-2-answer' ) ) >= 0 ) ?
 				localStorage.getItem( 'question-2-answer' ) : 'all';
 		}
-		else {
-			const themesPages = {
-				gambling: 'gambling',
-				drugs: 'drugs',
-				alcohol: 'alcohol',
-				emotions: 'anger'
-			}
+		// else {
+		// Override if on one of these pages
+		const themesPages = {
+			gambling: 'gambling',
+			drugs: 'drugs',
+			alcohol: 'alcohol',
+			emotions: 'anger'
+		}
 
-			// Check if someone is clicking from a theme page
-			for ( const pageClass in themesPages ) {
-				if( document.body.classList.contains( 'page-' + pageClass ) ) {
-					theme = themesPages[pageClass];
-				}
+		// Check if someone is clicking from a theme page
+		for ( const pageClass in themesPages ) {
+			if( document.body.classList.contains( 'page-' + pageClass ) ) {
+				theme = themesPages[pageClass];
 			}
+		}
 			// validThemes.forEach( ( themeLabel ) => {
 			// 	if( document.body.classList.contains( 'page-' + themeLabel ) ) {
 			// 		theme = themeLabel;
 			// 	}
 			// } );
-		}
+		// }
 		params.push( "theme=" + theme );
 	
 		// Session 
