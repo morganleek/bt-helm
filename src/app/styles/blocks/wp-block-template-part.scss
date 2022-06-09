@@ -61,6 +61,12 @@ header.wp-block-template-part {
 	z-index: 100;
 	background: var(--wp--preset--color--brand-cream);
 	transition: background-color 0.3s;
+	body.admin-bar & {
+		top: 32px;
+		@media screen and (max-width: 782px) {
+			top: 46px;
+		}
+	}
 	&::before {
 		content: '';
 		position: absolute;
