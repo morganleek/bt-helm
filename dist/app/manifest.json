@@ -4,8 +4,8 @@
   "app/assets/landing-right.jpg": "app/assets/landing-right-a4f69f8f.jpg",
   "editor.js": "app/editor-6a3f965b.js",
   "editor.js.map": "app/editor-6a3f965b.js.map",
-  "main.css": "app/main-6c6d490e.css",
-  "main.css.map": "app/main-6c6d490e.css.map",
+  "main.css": "app/main-8a23d3be.css",
+  "main.css.map": "app/main-8a23d3be.css.map",
   "main.js": "app/main-25f88022.js",
   "main.js.map": "app/main-25f88022.js.map",
   "runtime.js": "app/runtime-6974b681.js",
@@ -26,10 +26,10 @@
           "app/main-25f88022.js.map"
         ],
         "css": [
-          "app/main-6c6d490e.css"
+          "app/main-8a23d3be.css"
         ],
         "css.map": [
-          "app/main-6c6d490e.css.map"
+          "app/main-8a23d3be.css.map"
         ]
       }
     },
