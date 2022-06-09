@@ -4,14 +4,23 @@ footer.wp-block-template-part {
 
 .wp-site-blocks {
 	& > .overlay-close {
+		--wp--custom--spacing--outer: 20px;
+		@media (min-width: 782px) { 
+			--wp--custom--spacing--outer: min(2.375rem, 2.78vw);
+		}
+		@media (min-width: 1366px) { 
+			--wp--custom--spacing--outer: calc( ( 100vw - 1366px ) / 2 + min(2.375rem, 2.78vw) );
+		}
 		// Navigation shape shows close button but doesn't 
 		// allow it to be clicked. This is a second close button 
 		// with z increment
 		position: fixed;
 		z-index: 9991;
-		top: 0;
-		right: 10px;
+		top: 30px;
+		right: var(--wp--custom--spacing--outer);
 		pointer-events: none;
+		margin: 0;
+		
 		.toggle-navigation & {
 			pointer-events: all;
 		}
@@ -29,6 +38,9 @@ footer.wp-block-template-part {
 		// max-width: 50vw;
 		// background: var(--wp--preset--color--brand-orange);
 		// 250 725
+		--app-navigation-padding-top: min(8vh, 62px);
+		--app-navigation-padding-bottom: min(6.1vh, 47px);
+
 		position: fixed;
 		z-index: 9990;
 		top: 0;
@@ -37,36 +49,79 @@ footer.wp-block-template-part {
 		right: auto;
 		margin: 0 !important;
 		pointer-events: none;
-		width: min(95vw, 500px); // min(95vw, 408px);
+		width: 100%;
+		// width: min(95vw, 500px); // min(95vw, 408px);
 		overflow: scroll;
-		@media (min-width: 768px) { 
-			width: min(62vw, 725px);
+		// @media (min-width: 768px) { 
+		// 	width: min(62vw, 725px);
+		// }
+		&::before {
+			content: '';
+			position: fixed;
+			background: var(--wp--preset--color--brand-orange);
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: min(95vw, 500px); // min(95vw, 408px);
+			clip-path: url(#menuClip); // Added via footer SVG
+			transform: translate(-100%, 0);
+			transition: transform .3s;
+			@media (min-width: 768px) { 
+				width: min(62vw, 725px);
+			}
 		}
 		& > .wp-block-group.overlay-navigation-wrapper.has-background {
 			margin: 0 !important;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			min-height: 100vh;
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			// right: 0;
+			// min-height: 100vh;
 			display: flex;
 			flex-direction: column;
 			padding-left: var(--wp--custom--spacing--outer);
-			padding-right: 30.5%;
+			padding-right: 14%; // 30.5%;
 			// padding-right: var(--wp--custom--spacing--outer);
-			padding-top: min(8vh, 62px);
-			padding-bottom: min(6.1vh, 47px);
+			padding-top: var(--app-navigation-padding-top);
+			padding-bottom: var(--app-navigation-padding-bottom);
 			transform: translate(-100%, 0);
-			transition: all 0.3s;
-			clip-path: url(#menuClip); // Added via footer SVG
+			transition: transform .3s;
+			// clip-path: url(#menuClip); // Added via footer SVG
+			background-color: transparent !important;
 			row-gap: 25px;
+			// overflow-y: scroll;
+			width: min(95vw, 500px); // min(95vw, 408px);
+			// overflow: scroll;
+			@media (min-width: 768px) { 
+				width: min(62vw, 725px);
+			}
 			& > * {
 				max-width: 380px; // 325px;
 				width: 100%;
+				& > * {
+					width: 100%;
+				}
+			}
+			.scroll-stack {
+				height: calc(100vh - ( var(--app-navigation-padding-top) + var(--app-navigation-padding-bottom) ) );
+				flex-wrap: nowrap;
+				// padding-top: var(--app-navigation-padding-top);
+				// padding-bottom: var(--app-navigation-padding-bottom);
+				// padding-right: 15px;
+				--wp--style--block-gap: 25px;
+				&::after {
+					content: "";
+					display: inline-block;
+					width: 10px;
+					min-height: 10px;
+				}
 			}
 		}
 		.toggle-navigation & {
 			pointer-events: all;
+			&::before {
+				transform: translate(0, 0);
+			}
 			& > .wp-block-group.overlay-navigation-wrapper.has-background {
 				transform: translate(0, 0);
 			}
