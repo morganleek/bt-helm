@@ -8,8 +8,13 @@
 	}
 	&.has-extra-large-font-size {
 		.wp-block-navigation-item__content {
-			line-height: 0.95em;
+			line-height: 1.2em; // 0.95em;
 			padding-bottom: 0.15em;
+			font-size: 30px;
+			@media (min-width: 500px) { 
+				line-height: 1.1em; // 0.95em;
+				font-size: clamp(2.5rem, 1.3889rem + 2.3148vw, 3.125rem);
+			}
 		}
 	}
 	&:not(.has-extra-large-font-size) {
@@ -21,3 +26,6 @@
 		}
 	}
 }
+
+// 50px 1200px
+// 40px 768px

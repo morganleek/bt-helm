@@ -218,7 +218,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
 // iOS window height
 const bones_theme_window_height = () => {
   const doc = document.documentElement
-  doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+  doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+
+	if( document.querySelector( 'header' ) ) {
+		doc.style.setProperty('--app-header-height', `${document.querySelector( 'header' ).offsetHeight}px`);
+	}
 }
 
 window.addEventListener( 'load', () => {

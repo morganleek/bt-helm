@@ -37,9 +37,10 @@ footer.wp-block-template-part {
 		right: auto;
 		margin: 0 !important;
 		pointer-events: none;
-		width: min(95vw, 408px);
+		width: min(95vw, 500px); // min(95vw, 408px);
+		overflow: scroll;
 		@media (min-width: 768px) { 
-			width: min(53vw, 725px);
+			width: min(62vw, 725px);
 		}
 		& > .wp-block-group.overlay-navigation-wrapper.has-background {
 			margin: 0 !important;

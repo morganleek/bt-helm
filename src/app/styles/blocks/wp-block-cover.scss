@@ -32,7 +32,13 @@
 		}
 	}
 	&.home-introduction {
+		
 		// min-height: var(--app-height) !important;
+		@media (max-width: 767px) { 
+			align-items: flex-start;
+			min-height: 0 !important;
+			padding-top: 20px;
+		}
 	}
 	.wp-block-cover__inner-container {
 		--wp--custom--typography--font-size--gigantic: clamp(1.7725rem, 0.3491rem + 6.3260vw, 5.75rem);
