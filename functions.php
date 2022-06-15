@@ -260,6 +260,7 @@
 				$html .= '<div class="questions is-visible-question" data-question-label="Person:" data-question-set="0">';
 					$html .= '<h4><a href="#" data-answer="initialConsultation">Myself</a></h4>';
 					$html .= '<h4><a href="#" data-answer="supportedAdvice">My Partner</a></h4>';
+					$html .= '<h4><a href="#" data-answer="supportedAdvice">My Son</a></h4>';
 					$html .= '<h4><a href="#" data-answer="supportedAdvice">My Brother</a></h4>';
 					$html .= '<h4><a href="#" data-answer="supportedAdvice">My Friend</a></h4>';
 				$html .= '</div>';
