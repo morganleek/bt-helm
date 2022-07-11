@@ -1,4 +1,5 @@
 form {
+	--form-control-color: red;
 	fieldset {
 		padding: 0;
 		border: 0 none;
@@ -6,7 +7,7 @@ form {
 	select {
 		width: 100%;
 	}
-	input:not([type="submit"]):not([type="select-one"]), 
+	input:not([type="submit"]):not([type="select-one"]):not([type="checkbox"]):not([type="radio"]), 
 	textarea {
 		width: 100%;
 		font-family: var(--wp--preset--font-family--geometric-slab-medium);
@@ -30,6 +31,31 @@ form {
 	input[type="select-one"] {
 		display: none !important;
 	}
+	input[type="radio"] {
+		width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 2px 4px 0 !important;
+    padding: 0 !important;
+		position: relative;
+		box-sizing: border-box;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: var(--wp--preset--color--brand-cream);
+			left: 50%;
+			top: 50%;
+			border: 2px solid var(--wp--preset--color--brand-blue);
+			border-radius: 100%;
+			transform: translate(-50%, -50%);
+		}
+		&:checked::before {
+			background: var(--wp--preset--color--brand-blue);
+		}
+	}
 	textarea {
 		height: auto;
 		resize: none;
@@ -44,6 +70,32 @@ form {
 		border: 0 none;
 		border-radius: 20px;
 		font-size: calc( var(--wp--preset--font-size--large) * 1.35);
+	}
+	.frm_radio label {
+		font-family: var(--wp--preset--font-family--geometric-slab-medium);
+		color: var(--wp--preset--color--brand-blue);
+		font-size: var(--wp--preset--font-size--large);
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 25px;
+			height: 25px;
+		}
+	}
+	.frm_primary_label {
+		margin-bottom: 0.3em;
+	}
+	.frm_error_style {
+		margin-bottom: 1em;
+		color: var(--wp--preset--color--vivid-red);
+		text-align: center;
+	}
+	.frm_error {
+		margin-top: 0.3em;
+		color: var(--wp--preset--color--vivid-red);
 	}
 }
 
