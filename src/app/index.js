@@ -207,8 +207,17 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			}
 			else {
 				document.querySelector( '.questions-title' )?.classList.add( 'is-hidden' );
-				if( e.target.dataset['redirect'] ) {
-					window.location = e.target.dataset['redirect'];
+
+				if( localStorage.getItem( 'question-1-answer' ) == 'initialConsultation' ) {
+					// For themselves
+					if( e.target.dataset['redirect'] ) {
+						window.location = e.target.dataset['redirect'];
+					}
+				}
+				else {
+					if( e.target.dataset['redirectOthers'] ) {
+						window.location = e.target.dataset['redirectOthers'];
+					}
 				}
 			}
 		} );
